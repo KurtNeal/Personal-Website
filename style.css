@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+    font-weight: 300;
+}
+
+
+body {
+    background: #000000;
+    color: #ddd;
+}
+
+.background {
+    position: re;
+    top: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    background: url("Lands.webp") center/cover no-repeat fixed;
+}
+
+.hero {
+    height: 105vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: FadeIn2 0.5s ease-in 0s 1 alternate;
+}
+
+.nav {
+    width: 100%;
+    padding: 25px 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    cursor: pointer;
+}
+
+.Logo {
+    position: fixed;
+    left: -60px;
+    top: 5%; 
+    transform: translateY(-50%);
+    width: 180px;
+    height: 180px;
+    pointer-events: none;
+}
+
+
+.nav a {
+    position: relative;
+    color: #bdbdbd;
+    margin-left: 10px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+    transition: color 0.25s ease;
+    animation: FadeIn 2.5s ease-in 0s 1 alternate;
+}
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.50s ease;
+}
+
+.nav a:hover {
+    color: #fff;
+}
+
+.nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.hero-content {
+    text-align: center;
+    margin-bottom: clamp(300px, 500px, 500px);
+    position: relative;
+}
+
+.subtitle {
+    font-size: clamp(1.125rem, 3vw, 1.375rem);
+    color: #bdbdbd;
+    margin-bottom: 0px;
+    animation: FadeIn 2s ease-in 0s 1 alternate;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 3vw, 4.625rem);
+    color: #C9C9C9;
+    letter-spacing: 4px;
+    font-family: "Cinzel", serif;
+    font-weight: 400;
+    animation: FadeIn 2.5s ease-in 0s 1 alternate;
+}
+
+
+.about {
+    background: #000;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.about-heading {
+    font-size: clamp(2rem, 3vw, 3rem);
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+    color: #C9C9C9;
+    font-family: "Cinzel", serif;
+    font-weight: 400;
+    overflow: hidden;
+}
+
+.about-heading * {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+.about-content {
+    max-width: 990px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.name {
+    font-size: clamp(2.5rem, 3vw, 4rem);
+    color: #bebebe;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.roles {
+    font-size: clamp(0.5rem, 3vw, 1.20rem);
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #797979;
+    overflow: hidden;
+}
+
+.description {
+    font-size: clamp(0.8rem, 2vw, 1.25rem);
+    font-weight: 300;
+    margin-bottom: 30px;
+    margin: 0 0 1.2em;
+    color: #ADADAD;
+}
+
+.description a {
+    position: relative;
+    color: #7c7c7c;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.description a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.50s ease;
+}
+
+.description a:hover {
+    color: #e6e6e6;
+}
+
+.description a:hover::after {
+    transform: scaleX(1);
+}
+
+.about-content p {
+    line-height: 1.7;
+}
+
+.divider {
+    margin: 55px auto;
+    border: none;
+    width: clamp(260px, 30vw, 550px);
+    height: 2px;
+    background-color: #A1A1A1;
+    opacity: 0.8;
+    transform-origin: left center;
+}
+
+.reachout-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    margin-bottom: 13px;
+}
+
+.icons {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0.7);
+    cursor: pointer;
+    color: #ADADAD;
+    will-change: transform;
+}
+
+.email a {
+    position: relative;
+    color: #999;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.email a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+.email a:hover {
+    color: #fff;
+}
+
+.email a:hover::after {
+    transform: scaleX(1);
+}
+
+
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes FadeIn2 {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes FadeInSlideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
